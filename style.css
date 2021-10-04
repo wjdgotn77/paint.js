@@ -1,0 +1,68 @@
+@import "reset.css";
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0px;
+  background-color: #f6f9fc;
+}
+
+.canvas {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.controls .controls__range {
+  margin-bottom: 20px;
+}
+
+.controls .controls__buttons {
+  margin-bottom: 20px;
+}
+
+.controls__buttons button {
+  all: unset;
+  width: 45px;
+  height: 15px;
+  padding: 4px 4px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.controls__buttons button:active {
+  transform: scale(0.98);
+}
+
+.controls__colors {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.controls__colors .controls__color {
+  width: 50px;
+  height: 50px;
+  margin: 2px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
