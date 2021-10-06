@@ -33,8 +33,8 @@ body {
 
 .controls__buttons button {
   all: unset;
-  width: 45px;
-  height: 15px;
+  width: 50px;
+  height: 20px;
   padding: 4px 4px;
   border-radius: 8px;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -50,6 +50,10 @@ body {
 
 .controls__buttons button:active {
   transform: scale(0.98);
+}
+
+.controls__buttons button:hover {
+  background-color:#73C6B6;
 }
 
 .controls__colors {
