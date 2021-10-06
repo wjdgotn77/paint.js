@@ -1,3 +1,5 @@
+// 강의를 들으며 작성한 기본 기능에 대한 구현 코드입니다.
+
 const canvas = document.getElementById("jsCanvas");
 const context = canvas.getContext("2d");
 const colors = document.getElementsByClassName("jsColor");
@@ -69,6 +71,7 @@ function onMouseMove(event) {
 }
 
 function startPainting() {
+  // 같은 로직을 반복해주어야 하기 때문에 함수로 만들어 사용.
   isPainting = true;
 }
 
