@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <title>PaintJs</title>
 </head>
@@ -31,6 +34,17 @@
     </div>
   </div>
 
+  <!--save 버튼 클릭 시 팝업창-->
+  <div class="form-container hide">
+    <div id="jsForm" class="form">
+      <label for="jsForm-name" class="form__label">📢 저장하실 파일명을 입력해주세요.</label>
+      <input type="text" id="jsForm-name" class="form__input">
+      <div class="form__buttons">
+        <button type="button" class="jsForm-save">save</button>
+        <button type="button" class="jsForm-back">back</button>
+      </div>
+    </div>
+  </div>
   <script src="app.js"></script>
 </body>
 </html>
