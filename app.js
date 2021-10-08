@@ -4,10 +4,19 @@ const $pallete = document.getElementById("jsColors");
 const $brush = document.getElementById("jsRange");
 const $chooseMode = document.getElementById("jsMode");
 
+const $savePage = document.getElementById("jsSave");
+const $saveForm = document.querySelector(".form-container");
+const $inputName = document.getElementById("jsForm-name");
+const $saveButton = document.querySelector(".jsForm-save");
+const $backButton = document.querySelector(".jsForm-back");
+
 const DEFAULT_COLOR = "#2c2c2c";
 const DEFAULT_BGCOLOR = "#FFFF";
 const DEFAULT_LINE = 2.5;
 const CANVAS_SIZE = 500;
+const CSS_PROPERTIES = {
+  hide: "hide",
+}
 
 // Flags
 let isDrawing = false;
@@ -43,6 +52,15 @@ if ($brush) {
 if ($chooseMode) {
   $chooseMode.addEventListener("click", handleClickMode);
 }
+
+if ($savePage) {
+  $savePage.addEventListener("click", () => {
+    $saveForm.classList.remove(CSS_PROPERTIES.hide);
+  });
+}
+
+$saveButton.addEventListener("click", handleClickSave);
+$backButton.addEventListener("click", handleClickBack);
 
 function handleMouseMove(event) {
   const x = event.offsetX;
@@ -100,4 +118,17 @@ function handleFilledCanvas() {
   if (!isFilling) {
     $canvasContext.fillRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
   }
+}
+
+function handleClickBack() {
+  $saveForm.classList.add(CSS_PROPERTIES.hide);
+}
+
+function handleClickSave() {
+  const fileName = $inputName.value;
+  const image = $canvas.toDataURL("image/png");
+  const link = document.createElement("a");
+  link.href = image;
+  link.download = fileName;
+  link.click();
 }
