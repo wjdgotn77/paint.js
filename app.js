@@ -3,6 +3,7 @@ const $canvasContext = $canvas.getContext("2d");
 const $pallete = document.getElementById("jsColors");
 const $brush = document.getElementById("jsRange");
 const $chooseMode = document.getElementById("jsMode");
+const $clearCanvas = document.getElementById("jsClear");
 
 const $savePage = document.getElementById("jsSave");
 const $saveForm = document.querySelector(".form-container");
@@ -51,6 +52,12 @@ if ($brush) {
 
 if ($chooseMode) {
   $chooseMode.addEventListener("click", handleClickMode);
+}
+
+if ($clearCanvas) {
+  $clearCanvas.addEventListener("click", () => {
+    $canvasContext.clearRect(0, 0, CANVAS_SIZE, CANVAS_SIZE);
+  });
 }
 
 if ($savePage) {
